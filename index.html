@@ -1,57 +1,50 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Portfolio | Landing Demo</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TaskFlow — SaaS для задач</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <div class="logo">AI Portfolio</div>
-            <nav class="nav">
-                <a href="#about">Обо мне</a>
-                <a href="#projects">Проекты</a>
-                <a href="#contact">Контакты</a>
-            </nav>
-        </div>
-    </header>
+  <header class="header">
+    <a class="logo" href="#">TaskFlow</a>
+    <nav class="nav">
+      <a href="#features">Возможности</a>
+      <a href="#about">О нас</a>
+      <a href="#cta" class="btn btn--small">Начать</a>
+    </nav>
+  </header>
 
-    <main>
-        <section class="hero" id="about">
-            <div class="container">
-                <h1>Привет, я Python-разработчик</h1>
-                <p>Создаю ботов, парсеры, API и настраиваю CI/CD. Этот лендинг — демонстрация навыков верстки.</p>
-                <a href="#projects" class="btn">Смотреть проекты</a>
-            </div>
-        </section>
+  <section class="hero">
+    <h1>Управляй задачами без хаоса</h1>
+    <p>TaskFlow объединяет проекты, сроки и команду в одном окне.</p>
+    <a href="#cta" class="btn">Попробовать бесплатно</a>
+  </section>
 
-        <section class="projects" id="projects">
-            <div class="container">
-                <h2>Мои проекты</h2>
-                <div class="grid">
-                    <div class="card">
-                        <h3>CLI Scraper</h3>
-                        <p>Парсер заголовков на Python с BeautifulSoup.</p>
-                    </div>
-                    <div class="card">
-                        <h3>CI/CD Demo</h3>
-                        <p>Автоматизация тестов и деплоя через GitHub Actions и Docker.</p>
-                    </div>
-                    <div class="card">
-                        <h3>Django Notes API</h3>
-                        <p>REST API для заметок на Django.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+  <section id="features" class="section">
+    <h2>Возможности</h2>
+    <div class="grid">
+      <div class="card"><h3>Канбан</h3><p>Перетаскивай задачи между колонками.</p></div>
+      <div class="card"><h3>Дедлайны</h3><p>Напоминания и календарь в одном месте.</p></div>
+      <div class="card"><h3>Команда</h3><p>Роли, комментарии, история изменений.</p></div>
+    </div>
+  </section>
 
-    <footer class="footer" id="contact">
-        <div class="container">
-            <p>&copy; 2026 redsea1970. Сделано для портфолио.</p>
-        </div>
-    </footer>
+  <section id="about" class="section section--alt">
+    <h2>Почему TaskFlow</h2>
+    <p>Мы сделали инструмент, который не мешает работать: быстрый старт, минимум настроек, понятный интерфейс.</p>
+  </section>
+
+  <section id="cta" class="section cta">
+    <h2>Готовы навести порядок?</h2>
+    <a href="#" class="btn">Создать аккаунт</a>
+  </section>
+
+  <footer class="footer">
+    <p>© 2026 TaskFlow. Демо-проект.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

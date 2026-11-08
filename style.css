@@ -133,3 +133,33 @@ body {
     color: #64748b;
     font-size: 14px;
 }
+
+.section {
+  padding: 80px 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.section--alt {
+  background: #111c33;
+  border-radius: 16px;
+}
+.section h2 {
+  font-size: 32px;
+  margin-bottom: 24px;
+}
+.cta {
+  text-align: center;
+}
+.btn--small {
+  padding: 8px 16px;
+  font-size: 14px;
+}
+@media (max-width: 768px) {
+  .nav {
+    gap: 12px;
+    font-size: 14px;
+  }
+  .hero h1 {
+    font-size: 32px;
+  }
+}
