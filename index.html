@@ -50,6 +50,16 @@
     </p>
   </section>
 
+  <section id="llm-demo" class="section section--alt">
+    <h2>LLM demo (Ollama)</h2>
+    <p>Локальный FastAPI-прокси к Ollama. Запустите <code>uvicorn app:app --reload</code> в <code>llm-demo/</code>.</p>
+    <form id="llm-form">
+      <input id="llm-input" type="text" placeholder="Спросите что-нибудь..." required />
+      <button type="submit" class="btn">Отправить</button>
+    </form>
+    <pre id="llm-out" class="llm-out">Ответ появится здесь.</pre>
+  </section>
+
   <section id="cta" class="section cta">
     <h2>Готовы навести порядок?</h2>
     <a href="#" class="btn">Создать аккаунт</a>

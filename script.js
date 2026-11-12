@@ -37,3 +37,30 @@ document.addEventListener("click", function (e) {
     closeMenu();
   }
 });
+
+// LLM demo: POST to local FastAPI proxy (llm-demo/app.py)
+(function () {
+  const form = document.getElementById('llm-form');
+  if (!form) return;
+  const input = document.getElementById('llm-input');
+  const out = document.getElementById('llm-out');
+  const API = 'http://localhost:8000';
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const text = input.value.trim();
+    if (!text) return;
+    out.textContent = '...';
+    try {
+      const r = await fetch(API + '/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ prompt: text })
+      });
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      const data = await r.json();
+      out.textContent = data.response || data.answer || JSON.stringify(data, null, 2);
+    } catch (err) {
+      out.textContent = 'Ошибка: ' + err.message + '\n(Проверьте, что llm-demo запущен на :8000)';
+    }
+  });
+})();
